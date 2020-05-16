@@ -1,0 +1,6 @@
+# Files to ignore
+chromedriver.exe
+Practice.ipynb
+portfolio-template-01/
+.ipynb_checkpoints/
+.vscode/
