@@ -13,8 +13,8 @@
   <body>
     <div class="container">
       <!-- Add Jumbotron to Header -->
-      <div class="jumbotron text-center">
-        <h1>Mission to Mars</h1>
+      <div class="jumbotron text-center" style="background-image: url({{ mars.cerberus_image }}); background-size: 100%;">
+        <h1 style="color:white">Mission to Mars</h1>
         <!-- Add a button to activate scraping script -->
         <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
       </div>
@@ -36,13 +36,8 @@
       <div class="row" id="mars-featured-image">
         <div class="col-md-8">
           <h2>Featured Mars Image</h2>
-
           <!-- if images is False/None/non-existent, then default to error message -->
-          <img
-            src="{{ mars.featured_image | default('static/images/error.png', true)}}" 
-            class="img-responsive" alt="Responsive image"
-            />
-          </img>
+          <img src="{{ mars.featured_image | default('static/images/error.png', true)}}" class="img-responsive" alt="Responsive image">
         </div>
 
         <div class="col-md-4">
@@ -52,6 +47,43 @@
               <h4>Mars Facts</h4>
               {{ mars.facts | safe }}
             </div>
+          </div>
+        </div>
+      </div>
+      <!-- Section for Hemisphere Images -->
+      <div class="row" id="hemispheres-main-title">
+        <div class="col-md-12">
+          <h2>Mars Hemispheres</h2>
+        </div>
+      </div>
+      <!-- Hemisphere Thumbnails -->
+      <div class="row" id="hemisphere-thumbnails">
+        <div class="thumbnail col-md-3">
+          <img src="{{ mars.cerberus_image | default('static/images/error.png', true)}}" alt="{{ mars.cerberus_title }}">
+          <div class="caption">
+            <h4>{{ mars.cerberus_title }}</h4>
+            <p><a href="{{ mars.cerberus_image }}" class="btn btn-primary" role="button">View Larger Image</a></p>
+          </div>
+        </div>
+        <div class="thumbnail col-md-3">
+          <img src="{{ mars.schiaparelli_image | default('static/images/error.png', true)}}" alt="{{ mars.schiaparelli_title }}">
+          <div class="caption">
+            <h4>{{ mars.schiaparelli_title }}</h4>
+            <p><a href="{{ mars.schiaparelli_image }}" class="btn btn-primary" role="button">View Larger Image</a></p>
+          </div>
+        </div>
+        <div class="thumbnail col-md-3">
+          <img src="{{ mars.syrtis_image | default('static/images/error.png', true)}}" alt="{{ mars.syrtis_title }}">
+          <div class="caption">
+            <h4>{{ mars.syrtis_title }}</h4>
+            <p><a href="{{ mars.syrtis_image }}" class="btn btn-primary" role="button">View Larger Image</a></p>
+          </div>
+        </div>
+        <div class="thumbnail col-md-3">
+          <img src="{{ mars.valles_image | default('static/images/error.png', true)}}" alt="{{ mars.valles_title }}">
+          <div class="caption">
+            <h4>{{ mars.syrtis_title }}</h4>
+            <p><a href="{{ mars.valles_image }}" class="btn btn-primary" role="button">View Larger Image</a></p>
           </div>
         </div>
       </div>
