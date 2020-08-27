@@ -6,3 +6,4 @@ portfolio-template-01/
 .vscode/
 test.html
 test.py
+apps/__pycache__/
