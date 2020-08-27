@@ -7,4 +7,5 @@ The project consisted of writing a Python script to scrape information about the
 - Data source:
     - [NASA News website](https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest)
 
-- Technologies: Python, Splinter, BeautifulSoup, MongoDB, Jupyter Notebook, Pandas, Visual Studio Code 1.43.1
+- Technologies:
+    - Python, Splinter, BeautifulSoup, MongoDB, Jupyter Notebook, Pandas, Visual Studio Code 1.43.1
